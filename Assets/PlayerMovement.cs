@@ -10,12 +10,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float friction;
     [SerializeField] private float jumpStrength;
     private BoxCollider2D boxCollider2d;
+    private SpriteRenderer spriteRenderPlayer;
+
+    [SerializeField] private BoxCollider2D mushroomCollider;
 
     // Start is called before the first frame update
     void Start()
     {
         r2d2 = GetComponent<Rigidbody2D>(); 
         boxCollider2d = transform.GetComponent<BoxCollider2D>();
+        spriteRenderPlayer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -23,8 +27,14 @@ public class PlayerMovement : MonoBehaviour
     {
         r2d2.constraints = RigidbodyConstraints2D.FreezePositionX;
         r2d2.constraints = RigidbodyConstraints2D.None;
+        r2d2.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         float moveHorizontal = Input.GetAxis("Horizontal");
+        if(moveHorizontal<0){
+            spriteRenderPlayer.flipX = true;
+        } else{
+            spriteRenderPlayer.flipX = false;
+        }
         Vector3 movement = new Vector3(moveHorizontal,0,0);
         r2d2.AddForce(movement*speed);
         
