@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed;
     private Rigidbody2D r2d2;
     [SerializeField] private float friction;
-    [SerializeField] private float jumpStrength;
+    [SerializeField] public float jumpStrength;
     private BoxCollider2D boxCollider2d;
     private SpriteRenderer spriteRenderPlayer;
 
@@ -53,7 +53,12 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded()
     {
         float extraHeight = .1f;
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size,0f,Vector2.down, extraHeight, platformLayerMask);
+        RaycastHit2D raycastHit;
+        if(r2d2.gravityScale>0){
+            raycastHit = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size,0f,Vector2.down, extraHeight, platformLayerMask);
+        } else{
+            raycastHit = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size,0f,Vector2.up, extraHeight, platformLayerMask);
+        }
         return raycastHit.collider != null;
     }
 }
