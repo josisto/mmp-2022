@@ -20,10 +20,13 @@ public class Minimizer : MonoBehaviour
     }
 
     IEnumerator OnTriggerEnter2D(Collider2D other){
-        Rigidbody2D playerr2d2 = Player.GetComponent<Rigidbody2D>();
-        BoxCollider2D playerBox =  Player.GetComponent<BoxCollider2D>();
-        SpriteRenderer playerSprite = Player.GetComponent<SpriteRenderer>();
-        Transform playerTransform = Player.GetComponent<Transform>();
+        float triggered = Input.GetAxis("Horizontal");
+
+        if(triggered!=0){
+            Rigidbody2D playerr2d2 = Player.GetComponent<Rigidbody2D>();
+            BoxCollider2D playerBox =  Player.GetComponent<BoxCollider2D>();
+            SpriteRenderer playerSprite = Player.GetComponent<SpriteRenderer>();
+            Transform playerTransform = Player.GetComponent<Transform>();
 
         if (other == playerBox){
             float scaler;
@@ -38,6 +41,7 @@ public class Minimizer : MonoBehaviour
             playerBox.size.Scale(scaler*new Vector2(1.0f,1.0f));
 
             playerTransform.localScale = playerTransform.localScale*scaler;
+        }
         }
     }
 }

@@ -22,7 +22,7 @@ public class GravitySwitch : MonoBehaviour
     }
 
     IEnumerator OnTriggerEnter2D(Collider2D other){
-        if (other == Player){
+        if (other.tag =="Player"){
             yield return new WaitForSeconds(1);
             r2d2Player.gravityScale *= -1;
             playerMovement.jumpStrength *= -1;

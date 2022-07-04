@@ -5,10 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private LayerMask platformLayerMask;
-    [SerializeField] private float speed;
+    [SerializeField] public float speed=10f;
     private Rigidbody2D r2d2;
-    [SerializeField] private float friction;
-    [SerializeField] public float jumpStrength;
+    [SerializeField] public float jumpStrength=15f;
     private BoxCollider2D boxCollider2d;
     private SpriteRenderer spriteRenderPlayer;
 
@@ -25,18 +24,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        r2d2.constraints = RigidbodyConstraints2D.FreezePositionX;
-        r2d2.constraints = RigidbodyConstraints2D.None;
-        r2d2.constraints = RigidbodyConstraints2D.FreezeRotation;
-
         float moveHorizontal = Input.GetAxis("Horizontal");
         if(moveHorizontal<0){
             spriteRenderPlayer.flipX = true;
         } else{
             spriteRenderPlayer.flipX = false;
         }
-        Vector3 movement = new Vector3(moveHorizontal,0,0);
-        r2d2.AddForce(movement*speed);
+        r2d2.velocity = new Vector2(moveHorizontal*speed,r2d2.velocity.y);
         
         if(IsGrounded() && Input.GetKeyDown(KeyCode.Space)){
             Jump();
@@ -45,9 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {
-        Vector2 jump = new Vector2(0,jumpStrength);
-        r2d2.AddForce(jump, ForceMode2D.Impulse);
-        
+        r2d2.velocity = new Vector2(r2d2.velocity.x, jumpStrength);        
     }
 
     private bool IsGrounded()
