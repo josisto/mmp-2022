@@ -134,6 +134,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SizePliz1
       objectReference: {fileID: 0}
+    - target: {fileID: 2323870224664765258, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
+      propertyPath: ShroomType
+      value: size
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323870224664765258, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
+      propertyPath: shroomImpact
+      value: 
+      objectReference: {fileID: 1045114113}
     - target: {fileID: 6130270185985978890, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -228,6 +236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GravityPilz
       objectReference: {fileID: 0}
+    - target: {fileID: 2323870224664765258, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
+      propertyPath: shroomImpact
+      value: 
+      objectReference: {fileID: 1045114113}
     - target: {fileID: 6130270185985978890, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -298,24 +310,6 @@ PrefabInstance:
       objectReference: {fileID: 1045114111}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
---- !u!1 &231731902 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1920823869876094356, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
-  m_PrefabInstance: {fileID: 31076064}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &231731903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231731902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c52b96df1b19e4da7ece661324b194, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 1045114106}
 --- !u!1 &349356432
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,9 +662,10 @@ GameObject:
   - component: {fileID: 1045114107}
   - component: {fileID: 1045114111}
   - component: {fileID: 1045114112}
+  - component: {fileID: 1045114113}
   m_Layer: 0
   m_Name: Player_SampleScene
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -778,9 +773,8 @@ MonoBehaviour:
   platformLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  speed: 100
-  friction: 0.4
-  jumpStrength: 12
+  speed: 10
+  jumpStrength: 15
   mushroomCollider: {fileID: 581580078}
 --- !u!61 &1045114112
 BoxCollider2D:
@@ -808,6 +802,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 1.8}
   m_EdgeRadius: 0
+--- !u!114 &1045114113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045114106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5404cb09a56f16d409ae5f97fdd8e406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 0
+  weight: 0
+  shroomType: 
+  canEatShroom: 0
+  playerMovement: {fileID: 1045114111}
 --- !u!1 &1224830672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,6 +1311,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gravity-Pilz_Prototyp1
       objectReference: {fileID: 0}
+    - target: {fileID: 2323870224664765258, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
+      propertyPath: shroomImpact
+      value: 
+      objectReference: {fileID: 1045114113}
     - target: {fileID: 6130270185985978890, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_RootOrder
       value: 4

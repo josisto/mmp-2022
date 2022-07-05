@@ -11,6 +11,7 @@ public class ShroomImpact : MonoBehaviour
     private Rigidbody2D r2d2;
     private BoxCollider2D boxCollider2d;
     private SpriteRenderer playerSprite;
+    private Transform playerTransform;
     [SerializeField] private PlayerMovement playerMovement;
 
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class ShroomImpact : MonoBehaviour
         r2d2 = GetComponent<Rigidbody2D>();
         boxCollider2d = GetComponent<BoxCollider2D>();
         playerSprite = GetComponent<SpriteRenderer>();
+        playerTransform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -43,8 +45,18 @@ public class ShroomImpact : MonoBehaviour
                 playerSprite.flipY=false;
             }
         }
-        if(string.Equals(shroomType,"mini")){ 
-            
+        if(string.Equals(shroomType,"size")){ 
+            float scaler =0;
+            if(size==0){
+                scaler = 2.0f;
+                size =1;
+            }else if(size>0){
+                scaler = 0.5f;
+                size=0;
+            }
+            boxCollider2d.size.Scale(scaler*new Vector2(1.0f,1.0f));
+
+            playerTransform.localScale = playerTransform.localScale*scaler;
         }
         if(string.Equals(shroomType,"light")){ 
             
