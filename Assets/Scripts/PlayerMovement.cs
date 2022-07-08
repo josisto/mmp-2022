@@ -7,9 +7,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask platformLayerMask;
     [SerializeField] public float speed=10f;
     private Rigidbody2D r2d2;
+    float moveHorizontal = 0f;
     [SerializeField] public float jumpStrength=15f;
     private BoxCollider2D boxCollider2d;
     private SpriteRenderer spriteRenderPlayer;
+    [SerializeField] private float smoothing = .05f;
+    private Vector3 velocity = Vector3.zero;
 
     [SerializeField] private BoxCollider2D mushroomCollider;
 
@@ -24,22 +27,28 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        if(moveHorizontal<0){
-            spriteRenderPlayer.flipX = true;
-        } else{
-            spriteRenderPlayer.flipX = false;
-        }
-        r2d2.velocity = new Vector2(moveHorizontal*speed,r2d2.velocity.y);
-        
+        moveHorizontal = Input.GetAxis("Horizontal");
+
         if(IsGrounded() && Input.GetKeyDown(KeyCode.Space)){
             Jump();
         }
     }
 
-    void Jump()
+    void FixedUpdate()
     {
-        r2d2.velocity = new Vector2(r2d2.velocity.x, jumpStrength);        
+        if(moveHorizontal<0){
+            spriteRenderPlayer.flipX = true;
+        } else{
+            spriteRenderPlayer.flipX = false;
+        }
+        Vector3 movementVelocity = new Vector2(moveHorizontal * speed, r2d2.velocity.y);
+        //r2d2.velocity = new Vector2(moveHorizontal*speed,r2d2.velocity.y);
+        r2d2.velocity = Vector3.SmoothDamp(r2d2.velocity, movementVelocity, ref velocity, smoothing);
+    }
+
+    void Jump()
+    {     
+        r2d2.velocity = new Vector2(r2d2.velocity.x, jumpStrength);       
     }
 
     private bool IsGrounded()
