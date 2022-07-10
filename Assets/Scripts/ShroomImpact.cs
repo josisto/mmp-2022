@@ -13,6 +13,7 @@ public class ShroomImpact : MonoBehaviour
     private SpriteRenderer playerSprite;
     private Transform playerTransform;
     [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private Collider2D tilemapCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -58,16 +59,19 @@ public class ShroomImpact : MonoBehaviour
 
             playerTransform.localScale = playerTransform.localScale*scaler;
         }
+
         if(string.Equals(shroomType,"light")){ 
             r2d2.mass = 0.5f;
             playerMovement.jumpStrength *=1.5f;
         }
+
         if(string.Equals(shroomType,"heavy")){ 
             r2d2.mass = 2;
             playerMovement.jumpStrength *=0.7f;
         }
+
         if(string.Equals(shroomType,"ghost")){ 
-            
+            tilemapCollider.enabled=!tilemapCollider.enabled;
         }
     }
 }

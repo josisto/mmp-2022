@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GhostPlatform
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 10985715
+    locked: 0
+  - name: GhostPlatforms
+    uniqueID: 400992463
     locked: 0
   - name: Player
     uniqueID: 3550975263
