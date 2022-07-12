@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float smoothing = .05f;
     private Vector3 velocity = Vector3.zero;
 
+    public Animator playerAnimator;
+
     [SerializeField] private BoxCollider2D mushroomCollider;
 
     // Start is called before the first frame update
@@ -27,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playerAnimator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+
         moveHorizontal = Input.GetAxis("Horizontal");
 
         if(IsGrounded() && Input.GetKeyDown(KeyCode.Space)){
@@ -36,11 +40,6 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(moveHorizontal<0){
-            spriteRenderPlayer.flipX = true;
-        } else{
-            spriteRenderPlayer.flipX = false;
-        }
         Vector3 movementVelocity = new Vector2(moveHorizontal * speed, r2d2.velocity.y);
         //r2d2.velocity = new Vector2(moveHorizontal*speed,r2d2.velocity.y);
         r2d2.velocity = Vector3.SmoothDamp(r2d2.velocity, movementVelocity, ref velocity, smoothing);
