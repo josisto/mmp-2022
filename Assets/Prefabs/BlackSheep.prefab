@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: -2615724776002905727}
   - component: {fileID: 6849830088003376809}
   - component: {fileID: 8636093704005537935}
-  m_Layer: 0
+  - component: {fileID: 2797904578150295051}
+  m_Layer: 6
   m_Name: BlackSheep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,3 +166,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.56374276, y: 0.601833}
   m_EdgeRadius: 0
+--- !u!114 &2797904578150295051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687345513387044499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb91d408386f4f4a9f1344e5042d27d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  positions: []
