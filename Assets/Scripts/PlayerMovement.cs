@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public float speed=10f;
     private Rigidbody2D r2d2;
     float moveHorizontal = 0f;
-    [SerializeField] public float jumpStrength=15f;
+    public float jumpStrength=15f;
     private BoxCollider2D boxCollider2d;
     private SpriteRenderer spriteRenderPlayer;
     [SerializeField] private float smoothing = .05f;
@@ -47,7 +47,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {     
-        r2d2.velocity = new Vector2(r2d2.velocity.x, jumpStrength);       
+        //r2d2.velocity = new Vector2(r2d2.velocity.x, jumpStrength);
+        r2d2.velocity = Vector2.up * jumpStrength;    
     }
 
     private bool IsGrounded()

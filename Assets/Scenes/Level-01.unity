@@ -518,6 +518,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1252296827
       objectReference: {fileID: 0}
+    - target: {fileID: 4894883475529413972, guid: 0854b6675d1378146a941e5216508e13, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 181c9c38f4e4da34f988370d198b75ea, type: 2}
     - target: {fileID: 7444743713666133849, guid: 0854b6675d1378146a941e5216508e13, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -528,7 +532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7444743713666133849, guid: 0854b6675d1378146a941e5216508e13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -131.66792
+      value: -132.31
       objectReference: {fileID: 0}
     - target: {fileID: 7444743713666133849, guid: 0854b6675d1378146a941e5216508e13, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7049,7 +7053,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   speed: 20
-  jumpStrength: 20
+  jumpStrength: 45
   smoothing: 0.05
   playerAnimator: {fileID: 1194552928}
   mushroomCollider: {fileID: 0}
@@ -7068,7 +7072,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 6200000, guid: d1c79ca3751ba124b9814f8f47c88a0f, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
