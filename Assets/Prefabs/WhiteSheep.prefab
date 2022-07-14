@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4671736308983142685}
   - component: {fileID: 9052591989085884455}
   - component: {fileID: -1899397292971535090}
+  - component: {fileID: -8433967795615016807}
   m_Layer: 6
   m_Name: WhiteSheep
   m_TagString: Untagged
@@ -180,3 +181,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   positions: []
+--- !u!95 &-8433967795615016807
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6978864788489332810}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a9226180a8a07a4c8ebaab6b281b750, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
