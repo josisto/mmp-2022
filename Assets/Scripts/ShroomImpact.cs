@@ -37,6 +37,9 @@ public class ShroomImpact : MonoBehaviour
     }
 
     void eatShroom(string shroomType){
+        //update shroomScore
+        ScoreManager.instance.AddShroom();
+
         if(string.Equals(shroomType,"gravity")){ 
             r2d2.gravityScale *= -1;
             playerMovement.jumpStrength *= -1;
