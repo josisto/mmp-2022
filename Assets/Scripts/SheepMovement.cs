@@ -8,13 +8,18 @@ public class SheepMovement : MonoBehaviour
     [SerializeField] private Vector3[] positions;
     private int index;
 
+    void Start()
+    {
+        index = 0;
+    }
+
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * speed);
     
         if(transform.position == positions[index])
         {
-            if(index==positions.Length-1)
+            if(index>=positions.Length-1)
             {
                 index=0;
             }
