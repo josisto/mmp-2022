@@ -16,7 +16,7 @@ public class SheepMovement : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * speed);
-    
+        
         if(transform.position == positions[index])
         {
             if(index>=positions.Length-1)
@@ -28,6 +28,7 @@ public class SheepMovement : MonoBehaviour
                 index++;
             }
         }
+        
     
     }
 

@@ -18,6 +18,7 @@ public class FollowPlayer : MonoBehaviour
     {
         Vector3 cameraFollowPosition = GetCameraFollowPosition();
         cameraFollowPosition.z = transform.position.z;
-        transform.position = cameraFollowPosition;
+        Vector3 cameraShift= new Vector3(0,25,0);
+        transform.position = cameraFollowPosition+cameraShift;
     }
 }
