@@ -66,13 +66,11 @@ public class ShroomImpact : MonoBehaviour
         if(string.Equals(shroomType,"light")){ 
             r2d2.mass = 0.5f;
             playerMovement.jumpStrength *=1.5f;
-            ScoreManager.instance.ActivateShroomTimer(15, shroomType);
         }
 
         if(string.Equals(shroomType,"heavy")){ 
             r2d2.mass = 2;
             playerMovement.jumpStrength *=0.7f;
-            ScoreManager.instance.ActivateShroomTimer(15, shroomType);
         }
 
         if(string.Equals(shroomType,"ghost")){ 
