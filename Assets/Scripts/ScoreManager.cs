@@ -17,7 +17,7 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pilzScoreText.text = "Score: " + pilzScore.ToString();
+        pilzScoreText.text = pilzScore.ToString();
     }
 
     // Update is called once per frame
@@ -30,6 +30,6 @@ public class ScoreManager : MonoBehaviour
     public void AddShroom()
     {
         pilzScore -= 1;
-        pilzScoreText.text = "Score: " + pilzScore.ToString();
+        pilzScoreText.text = pilzScore.ToString();
     }
 }
