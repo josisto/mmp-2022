@@ -128,7 +128,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 912204934}
+    m_TransformParent: {fileID: 1124225967}
     m_Modifications:
     - target: {fileID: 1920823869876094356, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_Name
@@ -144,11 +144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6130270185985978890, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.7626405
+      value: 3.762641
       objectReference: {fileID: 0}
     - target: {fileID: 6130270185985978890, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.7626405
+      value: 3.762641
       objectReference: {fileID: 0}
     - target: {fileID: 6130270185985978890, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_LocalScale.z
@@ -340,7 +340,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 912204934}
+    m_TransformParent: {fileID: 1124225967}
     m_Modifications:
     - target: {fileID: 1920823869876094356, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_Name
@@ -944,7 +944,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 912204934}
+    m_TransformParent: {fileID: 1124225967}
     m_Modifications:
     - target: {fileID: 1058018756143587719, guid: c4b5efc54929e274384c2a192080e4dc, type: 3}
       propertyPath: m_RootOrder
@@ -6448,7 +6448,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 987505a9ac54fe84eb2e4a956bb82c62, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -6549,7 +6549,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 912204934}
+    m_TransformParent: {fileID: 1124225967}
     m_Modifications:
     - target: {fileID: 1920823869876094356, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_Name
@@ -6565,11 +6565,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6130270185985978890, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.7626405
+      value: 3.762641
       objectReference: {fileID: 0}
     - target: {fileID: 6130270185985978890, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.7626405
+      value: 3.762641
       objectReference: {fileID: 0}
     - target: {fileID: 6130270185985978890, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_LocalScale.z
@@ -7158,7 +7158,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: f1389012bcb22a148abb1727512e7a26, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -7272,7 +7272,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 9cdcb8e192e32b94d93740d820e93f4f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -7618,7 +7618,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 912204934}
+    m_TransformParent: {fileID: 1124225967}
     m_Modifications:
     - target: {fileID: 1005065927793917776, guid: 8e9006470876a06468d5023de01629cd, type: 3}
       propertyPath: ShroomType
@@ -7892,19 +7892,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1233061590}
-  - {fileID: 2049583842}
-  - {fileID: 637338151}
-  - {fileID: 1725750825}
-  - {fileID: 1175366947}
-  - {fileID: 1287494134}
-  - {fileID: 927909189}
-  - {fileID: 128652394}
-  - {fileID: 768145292}
-  - {fileID: 74656578}
-  - {fileID: 1230160945}
-  - {fileID: 1190974569}
-  - {fileID: 29448261}
+  - {fileID: 1124225967}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8090,7 +8078,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 912204934}
+    m_TransformParent: {fileID: 1124225967}
     m_Modifications:
     - target: {fileID: 1920823869876094356, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_Name
@@ -8732,6 +8720,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1454116675268859837, guid: 1126b8ae878137140a2cdc460af43e92, type: 3}
   m_PrefabInstance: {fileID: 2103994847}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1124225966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1124225967}
+  m_Layer: 0
+  m_Name: ShroomAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1124225967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124225966}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1233061590}
+  - {fileID: 2049583842}
+  - {fileID: 637338151}
+  - {fileID: 1725750825}
+  - {fileID: 1175366947}
+  - {fileID: 1287494134}
+  - {fileID: 927909189}
+  - {fileID: 128652394}
+  - {fileID: 768145292}
+  - {fileID: 74656578}
+  - {fileID: 1230160945}
+  - {fileID: 1190974569}
+  - {fileID: 29448261}
+  m_Father: {fileID: 912204934}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1130990137
 GameObject:
   m_ObjectHideFlags: 0
@@ -8871,7 +8903,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 912204934}
+    m_TransformParent: {fileID: 1124225967}
     m_Modifications:
     - target: {fileID: 1920823869876094356, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_Name
@@ -9202,7 +9234,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: f1389012bcb22a148abb1727512e7a26, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -9458,7 +9490,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: d715111e904b5ba468d8f5e06c63f792, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -9589,7 +9621,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 9cdcb8e192e32b94d93740d820e93f4f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -9753,7 +9785,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: f1389012bcb22a148abb1727512e7a26, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -9894,7 +9926,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: f1389012bcb22a148abb1727512e7a26, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -9906,7 +9938,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 912204934}
+    m_TransformParent: {fileID: 1124225967}
     m_Modifications:
     - target: {fileID: 1920823869876094356, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_Name
@@ -9922,11 +9954,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6130270185985978890, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.7626405
+      value: 3.762641
       objectReference: {fileID: 0}
     - target: {fileID: 6130270185985978890, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.7626405
+      value: 3.762641
       objectReference: {fileID: 0}
     - target: {fileID: 6130270185985978890, guid: 95fa30d5e53b6ef4e82d2eabbaad24dc, type: 3}
       propertyPath: m_LocalScale.z
@@ -10318,7 +10350,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 912204934}
+    m_TransformParent: {fileID: 1124225967}
     m_Modifications:
     - target: {fileID: 1005065927793917776, guid: 8e9006470876a06468d5023de01629cd, type: 3}
       propertyPath: ShroomType
@@ -10540,7 +10572,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: f1389012bcb22a148abb1727512e7a26, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -10552,7 +10584,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 912204934}
+    m_TransformParent: {fileID: 1124225967}
     m_Modifications:
     - target: {fileID: 167906245623543735, guid: 18fb060c2cf69244ba4b864e02e3edf0, type: 3}
       propertyPath: m_RootOrder
@@ -10650,7 +10682,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: f1389012bcb22a148abb1727512e7a26, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -14657,7 +14689,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: d89e15d9d2d97bf4cb34306de5203f4e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -15174,7 +15206,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 912204934}
+    m_TransformParent: {fileID: 1124225967}
     m_Modifications:
     - target: {fileID: 90262374216725832, guid: 37a4a00d577e73f49ba9fccdea09cf85, type: 3}
       propertyPath: m_RootOrder
@@ -15247,7 +15279,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 912204934}
+    m_TransformParent: {fileID: 1124225967}
     m_Modifications:
     - target: {fileID: 1005065927793917776, guid: 8e9006470876a06468d5023de01629cd, type: 3}
       propertyPath: ShroomType
@@ -15606,7 +15638,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 987505a9ac54fe84eb2e4a956bb82c62, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -55278,7 +55310,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 9cdcb8e192e32b94d93740d820e93f4f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -55463,7 +55495,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 912204934}
+    m_TransformParent: {fileID: 1124225967}
     m_Modifications:
     - target: {fileID: 90262374216725832, guid: 37a4a00d577e73f49ba9fccdea09cf85, type: 3}
       propertyPath: m_RootOrder
