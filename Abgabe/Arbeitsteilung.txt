@@ -1,0 +1,23 @@
+Aufgaben:
+
+Lea
+
+Joseph
+
+Nas
+
+Lisa:
+Gezeichnet:
+- Hintergrund
+- Blöcke für die Tilemaps
+- Haus
+- Blumen
+- Schafe
+- Büsche
+- Pilze
+- Charakter + Spritesheet fürs Laufen
+- Controls im Main Menü
+
+- Menü (MainMenu.cs)
+- Pausenmenü (PauseMenu.cs)
+- Zielmarker (FinishLine.cs)
