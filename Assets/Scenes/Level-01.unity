@@ -5750,7 +5750,7 @@ GameObject:
   - component: {fileID: 479097167}
   - component: {fileID: 479097166}
   m_Layer: 0
-  m_Name: "Haust\xFCr"
+  m_Name: FinishLine
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
