@@ -80,6 +80,7 @@ public class ShroomImpact : MonoBehaviour
 
     public void reset()
     {
+        size=1;
         boxCollider2d.size = new Vector2(0.9f,1.5f);
         playerTransform.localScale = new Vector3(8.5f,8.5f,8.5f);
         r2d2.mass = 1;
