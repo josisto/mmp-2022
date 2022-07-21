@@ -9,7 +9,13 @@ Lea:
 - Camera Steuerung (FollowPlayer.cs + GameHandler.cs)
 - Bewegung der Schafe (SheepMovement.cs)
 
-Joseph
+Josef:
+- Optimierung des Player-Movments (smoothere Links-Rechts Bewegung, PlayerMovement.cs)
+- Animation Player (Laufbewegung)
+- Animation Schafe
+- Animation Pilze
+- Animation Blumen
+- Score Anzeige (ScoreManager.cs)
 
 Nas
 
