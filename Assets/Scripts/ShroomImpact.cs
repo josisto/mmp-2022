@@ -5,7 +5,6 @@ using UnityEngine;
 public class ShroomImpact : MonoBehaviour
 {
     [SerializeField] private int size; // 0 is smal, 1 is normal
-    [SerializeField] private int weight; // 0 is light, 1 is normal, 2 is heavy
     [SerializeField] public string shroomType;
     [SerializeField] public bool canEatShroom;
     private Rigidbody2D r2d2;
@@ -13,13 +12,12 @@ public class ShroomImpact : MonoBehaviour
     private SpriteRenderer playerSprite;
     private Transform playerTransform;
     [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] private Collider2D tilemapCollider;
+    [SerializeField] private Collider2D[] ghostCollider;
     
     // Start is called before the first frame update
     void Start()
     {
         size=1;
-        weight = 1;
         shroomType="";
         canEatShroom=false;
         r2d2 = GetComponent<Rigidbody2D>();
@@ -65,16 +63,18 @@ public class ShroomImpact : MonoBehaviour
 
         if(string.Equals(shroomType,"light")){ 
             r2d2.mass = 0.5f;
-            playerMovement.jumpStrength =45*1.5f;
+            playerMovement.jumpStrength =1.5f*9*r2d2.gravityScale;
         }
 
         if(string.Equals(shroomType,"heavy")){ 
             r2d2.mass = 2;
-            playerMovement.jumpStrength =45*0.7f;
+            playerMovement.jumpStrength =0.7f*9*r2d2.gravityScale;
         }
 
         if(string.Equals(shroomType,"ghost")){ 
-            tilemapCollider.enabled=!tilemapCollider.enabled;
+            foreach(Collider2D collider in ghostCollider){
+                collider.enabled=!collider.enabled;
+            }
         }
     }
 
@@ -83,7 +83,9 @@ public class ShroomImpact : MonoBehaviour
         boxCollider2d.size = new Vector2(0.9f,1.5f);
         playerTransform.localScale = new Vector3(8.5f,8.5f,8.5f);
         r2d2.mass = 1;
-        playerMovement.jumpStrength = 45;
-        tilemapCollider.enabled=true;
+        playerMovement.jumpStrength = 9 *r2d2.gravityScale;
+        foreach(Collider2D collider in ghostCollider){
+                collider.enabled=true;
+            }
     }
 }
