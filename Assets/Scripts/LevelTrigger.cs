@@ -22,8 +22,6 @@ public class LevelTrigger : MonoBehaviour
     {
         if(other.tag=="Player"){
             shroomImpact.reset();
-            shroomImpact.canEatShroom =true;
-
         }
     }
 }

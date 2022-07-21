@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
         moveHorizontal = Input.GetAxis("Horizontal");
 
-        if(IsGrounded() && Input.GetKeyDown(KeyCode.Space)){
+        if(IsGrounded() && (Input.GetKeyDown(KeyCode.Space)|| Input.GetAxis("Vertical")>0)){
             Jump();
         }
     }
@@ -41,13 +41,11 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 movementVelocity = new Vector2(moveHorizontal * speed, r2d2.velocity.y);
-        //r2d2.velocity = new Vector2(moveHorizontal*speed,r2d2.velocity.y);
         r2d2.velocity = Vector3.SmoothDamp(r2d2.velocity, movementVelocity, ref velocity, smoothing);
     }
 
     void Jump()
     {     
-        //r2d2.velocity = new Vector2(r2d2.velocity.x, jumpStrength);
         r2d2.velocity = Vector2.up * jumpStrength;    
     }
 
