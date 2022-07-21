@@ -1,6 +1,13 @@
 Aufgaben:
 
-Lea
+Lea:
+- Basic Player Movement (Erste Version von PlayerMovement.cs)
+- Player Jump & Groundcheck
+- Funktionalität der Pilz (ShroomImpact.cs + ShroomTrigger.cs)
+- Animation blinzelnder Busch
+- Leveldesign & Tilemap (LevelTrigger.cs)
+- Camera Steuerung (FollowPlayer.cs + GameHandler.cs)
+- Bewegung der Schafe (SheepMovement.cs)
 
 Joseph
 
