@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
         moveHorizontal = Input.GetAxis("Horizontal");
 
-        if(IsGrounded() && (Input.GetKeyDown(KeyCode.Space)|| Input.GetAxis("Vertical")>0)){
+        if(IsGrounded() && Input.GetKeyDown(KeyCode.Space)){
             Jump();
         }
     }
