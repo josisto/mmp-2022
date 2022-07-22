@@ -28,9 +28,12 @@ Gezeichnet:
 - Schafe
 - Büsche
 - Pilze
-- Charakter + Spritesheet fürs Laufen
-- Controls im Main Menü
+- Wolken
+- Charakterdesign
+- Spritesheet fürs Laufen
+- Spritesheet für die Essanimation
 
 - Menü (MainMenu.cs)
 - Pausenmenü (PauseMenu.cs)
 - Zielmarker (FinishLine.cs)
+- Game Over Screen (GameOverScreen.cs)
