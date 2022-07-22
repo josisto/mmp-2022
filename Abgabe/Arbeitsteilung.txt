@@ -29,6 +29,7 @@ Gezeichnet:
 - Büsche
 - Pilze
 - Wolken
+- Controls im Menü
 - Charakterdesign
 - Spritesheet fürs Laufen
 - Spritesheet für die Essanimation
