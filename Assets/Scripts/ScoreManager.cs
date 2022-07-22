@@ -8,6 +8,8 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
     public TMPro.TMP_Text pilzScoreText;
 
+    [SerializeField] private GameObject possibleToEatText;
+
     int pilzScore = 0;
 
     private void Awake() {
@@ -18,6 +20,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         pilzScoreText.text = pilzScore.ToString();
+        disableText();
     }
 
     // Update is called once per frame
@@ -31,5 +34,15 @@ public class ScoreManager : MonoBehaviour
     {
         pilzScore -= 1;
         pilzScoreText.text = pilzScore.ToString();
+    }
+
+    public void enableText()
+    {
+        possibleToEatText.SetActive(true);
+    }
+
+    public void disableText()
+    {
+        possibleToEatText.SetActive(false);
     }
 }

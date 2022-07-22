@@ -24,6 +24,7 @@ public class ShroomTrigger : MonoBehaviour
         if(other.tag=="Player"){
             shroomImpact.canEatShroom =true;
             shroomImpact.shroomType =ShroomType;
+            ScoreManager.instance.enableText();
         }
     }
 
@@ -31,6 +32,7 @@ public class ShroomTrigger : MonoBehaviour
     {
         if(other.tag=="Player"){
             shroomImpact.canEatShroom=false;
+            ScoreManager.instance.disableText();
         }
     }
 }
