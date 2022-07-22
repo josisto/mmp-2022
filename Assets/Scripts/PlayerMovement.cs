@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public float speed=10f;
     private Rigidbody2D r2d2;
     float moveHorizontal = 0f;
+    bool inJump = false;
     public float jumpStrength=15f;
     private BoxCollider2D boxCollider2d;
     private SpriteRenderer spriteRenderPlayer;
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         r2d2 = GetComponent<Rigidbody2D>(); 
         boxCollider2d = transform.GetComponent<BoxCollider2D>();
         spriteRenderPlayer = GetComponent<SpriteRenderer>();
+        playerAnimator.SetBool("Jump", false);  
     }
 
     // Update is called once per frame
@@ -35,7 +37,16 @@ public class PlayerMovement : MonoBehaviour
 
         if(IsGrounded() && Input.GetKeyDown(KeyCode.Space)){
             Jump();
+            inJump = true;
         }
+
+        // if(inJump){
+        //     if(IsGrounded()) {
+        //         inJump = false;
+        //         playerAnimator.SetBool("Jump", false);  
+        //     
+        // }
+
     }
 
     void FixedUpdate()
@@ -46,7 +57,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {     
-        r2d2.velocity = Vector2.up * jumpStrength;    
+        r2d2.velocity = Vector2.up * jumpStrength;
+        playerAnimator.SetBool("Jump", true);  
     }
 
     private bool IsGrounded()
