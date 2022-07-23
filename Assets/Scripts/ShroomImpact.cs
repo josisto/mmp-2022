@@ -30,15 +30,18 @@ public class ShroomImpact : MonoBehaviour
     void Update()
     {
         if(Input.GetButtonDown("Submit") && canEatShroom){ 
-            eatShroom(shroomType);
+            StartCoroutine(eatShroom(shroomType));
             playerMovement.playerAnimator.SetTrigger("Eat");
         }
     }
 
-    void eatShroom(string shroomType){
+    IEnumerator eatShroom(string shroomType){
         //update shroomScore
         ScoreManager.instance.AddShroom();
 
+        StartCoroutine(waitforEating());
+
+        yield return new WaitForSeconds(1);
         if(string.Equals(shroomType,"gravity")){ 
             r2d2.gravityScale *= -1;
             playerMovement.jumpStrength *= -1;
@@ -77,6 +80,13 @@ public class ShroomImpact : MonoBehaviour
                 collider.enabled=!collider.enabled;
             }
         }
+    }
+
+    IEnumerator waitforEating()
+    {
+        playerMovement.eating = true;
+        yield return new WaitForSeconds(1);
+        playerMovement.eating = false;
     }
 
     public void reset()
