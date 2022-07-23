@@ -31,6 +31,7 @@ public class ShroomImpact : MonoBehaviour
     {
         if(Input.GetButtonDown("Submit") && canEatShroom){ 
             eatShroom(shroomType);
+            playerMovement.playerAnimator.SetTrigger("Eat");
         }
     }
 
@@ -88,5 +89,7 @@ public class ShroomImpact : MonoBehaviour
         foreach(Collider2D collider in ghostCollider){
                 collider.enabled=true;
             }
+
+        
     }
 }

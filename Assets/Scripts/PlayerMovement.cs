@@ -70,10 +70,20 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
         }
 
-        if (r2d2.velocity.y < 0 && !isGrounded) 
+        if (r2d2.gravityScale > 0)
         {
-            playerAnimator.SetBool("Jump", isGrounded);
+    	    if (r2d2.velocity.y < 0 && !isGrounded) 
+            {
+                playerAnimator.SetBool("Jump", isGrounded);
+            }
         }
+        else {
+            if (r2d2.velocity.y > 0 && !isGrounded) 
+            {   
+                playerAnimator.SetBool("Jump", isGrounded);
+            }
+        }
+        
     }
 
     void Move(float direction)
