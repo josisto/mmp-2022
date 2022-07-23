@@ -5,6 +5,7 @@ Lea:
 - Player Jump & Groundcheck
 - Funktionalität der Pilz (ShroomImpact.cs + ShroomTrigger.cs)
 - Animation blinzelnder Busch
+- Animation Wolken
 - Leveldesign & Tilemap (LevelTrigger.cs)
 - Camera Steuerung (FollowPlayer.cs + GameHandler.cs)
 - Bewegung der Schafe (SheepMovement.cs)
@@ -17,7 +18,7 @@ Josef:
 - Animation Blumen
 - Score Anzeige (ScoreManager.cs)
 
-Nas
+Nas:
 
 Lisa:
 Gezeichnet:
