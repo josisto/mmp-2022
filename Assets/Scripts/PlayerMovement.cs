@@ -118,4 +118,44 @@ public class PlayerMovement : MonoBehaviour
     {
         r2d2.velocity = Vector2.up * jumpStrength;
     }
+
+    public void reset()
+    {
+        Vector3 currentScale = transform.localScale;
+
+        if (r2d2.gravityScale > 0) {
+            if (Input.GetAxisRaw("Horizontal") > 0)
+            {
+                if (currentScale.x < 0)
+                {
+                    currentScale.x *= -1;
+                    facesRight = true;
+                }  
+            } 
+            else if (Input.GetAxisRaw("Horizontal") < 0) {
+                if (currentScale.x > 0) 
+                {
+                    currentScale.x *= -1;
+                    facesRight = false;
+                } 
+            }
+        } else {
+            if (Input.GetAxisRaw("Horizontal") > 0)
+            {
+                if (currentScale.x < 0)
+                {
+                    currentScale.x *= -1;
+                    facesRight = true;
+                }  
+            } 
+            else if (Input.GetAxisRaw("Horizontal") < 0) {
+                if (currentScale.x > 0) 
+                {
+                    currentScale.x *= -1;
+                    facesRight = false;
+                } 
+            }
+        }
+        transform.localScale = currentScale;
+    }
 }

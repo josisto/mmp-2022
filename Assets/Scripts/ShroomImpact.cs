@@ -90,6 +90,6 @@ public class ShroomImpact : MonoBehaviour
                 collider.enabled=true;
             }
 
-        
+        playerMovement.reset();
     }
 }
