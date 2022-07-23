@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer spriteRenderPlayer;
     private Vector3 velocity = Vector3.zero;
 
+    public bool eating=false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         // moveVertical = Input.GetAxisRaw("Vertical");
         //moveVertical = r2d2.velocity.y;
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && !eating)
         {
             playerAnimator.SetBool("Jump", true);
             Jump();
@@ -50,8 +52,10 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         GroundCheck();
-        Move(moveHorizontal);
-        
+        if(!eating)
+        {
+            Move(moveHorizontal);
+        }  
     }
 
     void GroundCheck()
@@ -117,5 +121,45 @@ public class PlayerMovement : MonoBehaviour
     void Jump()
     {
         r2d2.velocity = Vector2.up * jumpStrength;
+    }
+
+    public void reset()
+    {
+        Vector3 currentScale = transform.localScale;
+
+        if (r2d2.gravityScale > 0) {
+            if (Input.GetAxisRaw("Horizontal") > 0)
+            {
+                if (currentScale.x < 0)
+                {
+                    currentScale.x *= -1;
+                    facesRight = true;
+                }  
+            } 
+            else if (Input.GetAxisRaw("Horizontal") < 0) {
+                if (currentScale.x > 0) 
+                {
+                    currentScale.x *= -1;
+                    facesRight = false;
+                } 
+            }
+        } else {
+            if (Input.GetAxisRaw("Horizontal") > 0)
+            {
+                if (currentScale.x < 0)
+                {
+                    currentScale.x *= -1;
+                    facesRight = true;
+                }  
+            } 
+            else if (Input.GetAxisRaw("Horizontal") < 0) {
+                if (currentScale.x > 0) 
+                {
+                    currentScale.x *= -1;
+                    facesRight = false;
+                } 
+            }
+        }
+        transform.localScale = currentScale;
     }
 }
