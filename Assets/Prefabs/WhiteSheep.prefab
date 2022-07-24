@@ -15,7 +15,11 @@ GameObject:
   - component: {fileID: 9052591989085884455}
   - component: {fileID: -1899397292971535090}
   - component: {fileID: -8433967795615016807}
+<<<<<<< Updated upstream
   - component: {fileID: 6379853072544468697}
+=======
+  - component: {fileID: 8842511029613782400}
+>>>>>>> Stashed changes
   m_Layer: 6
   m_Name: WhiteSheep
   m_TagString: Untagged
@@ -182,6 +186,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   positions: []
+  sheepSound: {fileID: 0}
+  sheepSoundController: {fileID: 0}
 --- !u!95 &-8433967795615016807
 Animator:
   serializedVersion: 4
@@ -202,13 +208,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+<<<<<<< Updated upstream
 --- !u!82 &6379853072544468697
+=======
+--- !u!82 &8842511029613782400
+>>>>>>> Stashed changes
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6978864788489332810}
+<<<<<<< Updated upstream
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -217,13 +228,28 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
+=======
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.513
+  m_Pitch: 1
+  Loop: 0
+>>>>>>> Stashed changes
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
+<<<<<<< Updated upstream
   MinDistance: 5
   MaxDistance: 30
+=======
+  MinDistance: 1
+  MaxDistance: 500
+>>>>>>> Stashed changes
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -258,7 +284,11 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
+<<<<<<< Updated upstream
       value: 0
+=======
+      value: 1
+>>>>>>> Stashed changes
       inSlope: 0
       outSlope: 0
       tangentMode: 0

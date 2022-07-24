@@ -45,14 +45,6 @@ public class Sound {
 
 public class AudioManager : MonoBehaviour
 {
-<<<<<<< Updated upstream
-    //public List<AudioClip>() sfxLibrary;
-    // // Start is called before the first frame update
-    // void Start()
-    // {
-        
-    // }
-=======
     public static AudioManager instance;
     
     [SerializeField]
@@ -62,7 +54,6 @@ public class AudioManager : MonoBehaviour
     // SoundRandomController[] soundRandomizedCollections;
     // [SerializeField]
     // Sound[] trackLoops;
->>>>>>> Stashed changes
 
     void Awake()
     {
@@ -79,9 +70,6 @@ public class AudioManager : MonoBehaviour
             DontDestroyOnLoad(this);
         }
         
-<<<<<<< Updated upstream
-    //}
-=======
     }
     
     void Start()
@@ -109,5 +97,4 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
->>>>>>> Stashed changes
 }

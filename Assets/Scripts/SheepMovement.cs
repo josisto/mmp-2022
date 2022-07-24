@@ -8,7 +8,7 @@ public class SheepMovement : MonoBehaviour
     [SerializeField] private Vector3[] positions;
     private int index;
 
-    private float delay;
+    //private float delay;
 
     void Start()
     {
