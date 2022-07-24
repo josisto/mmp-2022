@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public List<AudioClip>() sfxLibrary;
+    //public List<AudioClip>() sfxLibrary;
     // // Start is called before the first frame update
     // void Start()
     // {
@@ -15,5 +15,5 @@ public class AudioManager : MonoBehaviour
     // void Update()
     // {
         
-    }
+    //}
 }
