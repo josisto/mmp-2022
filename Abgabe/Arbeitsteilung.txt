@@ -9,6 +9,7 @@ Lea:
 - Leveldesign & Tilemap (LevelTrigger.cs)
 - Camera Steuerung (FollowPlayer.cs + GameHandler.cs)
 - Bewegung der Schafe (SheepMovement.cs)
+- Videopräsentation des Spiels
 
 Josef:
 - Optimierung des Player-Movments (smoothere Links-Rechts Bewegung, PlayerMovement.cs)
@@ -19,6 +20,8 @@ Josef:
 - Score Anzeige (ScoreManager.cs)
 
 Nas:
+- Sound
+- Jump-Animation
 
 Lisa:
 Gezeichnet:
