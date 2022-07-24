@@ -22,7 +22,11 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer spriteRenderPlayer;
     private Vector3 velocity = Vector3.zero;
 
+    // private AudioManager audioManager;
     public bool eating=false;
+
+    //audiomanager
+    AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +35,11 @@ public class PlayerMovement : MonoBehaviour
         boxCollider2d = transform.GetComponent<BoxCollider2D>();
         spriteRenderPlayer = GetComponent<SpriteRenderer>();
         playerAnimator = GetComponent<Animator>();
+        audioManager = AudioManager.instance;
+        if (audioManager == null)
+        {
+            Debug.LogError("No AM File!");
+        }
     }
 
     // Update is called once per frame
@@ -116,11 +125,14 @@ public class PlayerMovement : MonoBehaviour
         // current players horisontal and vertical values
         playerAnimator.SetFloat("HorizontalSpeed", Mathf.Abs(r2d2.velocity.x));
         playerAnimator.SetFloat("Vertical", (r2d2.velocity.y));
+
+        audioManager.PlaySound("walk");
     }
 
     void Jump()
     {
         r2d2.velocity = Vector2.up * jumpStrength;
+        audioManager.PlaySound("jump");
     }
 
     public void reset()

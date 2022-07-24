@@ -8,6 +8,8 @@ public class SheepMovement : MonoBehaviour
     [SerializeField] private Vector3[] positions;
     private int index;
 
+    private float delay;
+
     void Start()
     {
         index = 0;
@@ -28,10 +30,20 @@ public class SheepMovement : MonoBehaviour
                 index++;
             }
         }
-        
     
     }
 
+    // void FixedUpdate()
+    // {
+    //     delay = Random.Range(0.5f, 3f);
+    //     PlaySheepSound();
+    // }
 
+    // public void PlaySheepSound()
+    // {
+    //     audioSource.clip = sheepSound;
+    //     audioSource.PlayDelayed(delay);
+    //     SoundRandomController.Trigger(sheepSoundController);
+    // }
 
 }
