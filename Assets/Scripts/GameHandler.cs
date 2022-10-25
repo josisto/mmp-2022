@@ -8,20 +8,20 @@ public class GameHandler : MonoBehaviour
     public FollowPlayer followPlayer;
     public Transform playerTransform;
 
-    // cache
-    private AudioManager audioManager;
+    // // cache
+    // private AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
     { 
         followPlayer.Setup(() => playerTransform.position);
 
-        // caching
-        audioManager = AudioManager.instance;
+        // // caching
+        // audioManager = AudioManager.instance;
 
-        if (audioManager == null) {
-            Debug.LogError("ALERT! No AudioManager in the scene!");
-        }
+        // if (audioManager == null) {
+        //     Debug.LogError("ALERT! No AudioManager in the scene!");
+        // }
 
     }
 

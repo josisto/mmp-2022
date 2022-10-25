@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8636093704005537935}
   - component: {fileID: 2797904578150295051}
   - component: {fileID: -4956040405977522253}
-  - component: {fileID: -974633019935292777}
+  - component: {fileID: 6689631223808720107}
   m_Layer: 6
   m_Name: BlackSheep
   m_TagString: Untagged
@@ -202,7 +202,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!82 &-974633019935292777
+--- !u!82 &6689631223808720107
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,7 +212,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 570958796c4755540a8a24416665933a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 73ba485a7b89e3c48b2633539db4656a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -223,7 +223,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 5
-  MaxDistance: 30
+  MaxDistance: 50
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
