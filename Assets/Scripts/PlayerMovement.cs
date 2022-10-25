@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         // moveVertical = Input.GetAxisRaw("Vertical");
         //moveVertical = r2d2.velocity.y;
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && !eating)
+        if (Input.GetButtonDown("Jump") && isGrounded && !eating)
         {
             playerAnimator.SetBool("Jump", true);
             Jump();
